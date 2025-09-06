@@ -1,14 +1,22 @@
+body {
+  font-size: 1.125rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 main {
   margin: 0 auto;
-  width: 60%;
-  max-width: 800px;
+  width: 80%;
+  max-width: 900px;
   background-color: rgb(255, 225, 172);
   text-align: center;
 
   display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
 
 
 }
@@ -17,7 +25,7 @@ p {
   margin: 0;
 }
 
-main > * {
+main>* {
   border: 1px solid black;
 }
 
@@ -25,6 +33,7 @@ main > * {
   display: block;
   max-width: 100%;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 .description {
@@ -35,11 +44,13 @@ main > * {
   padding: 0.5rem 0;
 }
 
-.contact-details > *, .company-details > * {
-  margin: 0.5rem 0 0.25rem;
+.description > * {
+  border: 1px solid red;
 }
+
 .name {
-  font-size: 1.75rem;
+  font-size: 1.625rem;
+  font-weight: 600;
 }
 .title {
   font-style: italic;
@@ -48,4 +59,12 @@ main > * {
 .company {
   font-size: 1.25rem;
   font-weight: 600;
+}
+
+@media (min-width: 500px) {
+  .description {
+    flex-direction: row;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

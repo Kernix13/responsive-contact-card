@@ -21,7 +21,7 @@ a {
 
 /* Set a consistent base font size and line-height */
 html {
-    font-size: 100%; /* 16px as default, adjust as needed */
+    font-size: 1rem; /* 16px as default, adjust as needed */
     line-height: 1.5;
     -webkit-text-size-adjust: 100%; /* Prevent text resizing on mobile */
     scroll-behavior: smooth; /* Smooth scrolling */

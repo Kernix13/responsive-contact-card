@@ -5,8 +5,7 @@ body {
 
 main {
   margin: 0 auto;
-  width: 80%;
-  max-width: 900px;
+  width: 70%;
   background-color: rgb(255, 225, 172);
   text-align: center;
 
@@ -17,23 +16,20 @@ main {
   gap: 1rem;
   justify-content: center;
   padding: 1rem;
-
-
 }
 
 p {
   margin: 0;
 }
 
-main>* {
-  border: 1px solid black;
-}
-
 .image {
   display: block;
   max-width: 100%;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: 1rem auto 0;
+
+  width: 200px;
+  height: auto;
 }
 
 .description {
@@ -42,10 +38,6 @@ main>* {
   justify-content: space-between;
   gap: 1rem;
   padding: 0.5rem 0;
-}
-
-.description > * {
-  border: 1px solid red;
 }
 
 .name {
@@ -62,9 +54,34 @@ main>* {
 }
 
 @media (min-width: 500px) {
+  main {
+    width: 80%;
+  }
+
   .description {
     flex-direction: row;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 700px;
+
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .image {
+    width: 75%;
+    height: auto;
+  }
+
+  .description {
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
